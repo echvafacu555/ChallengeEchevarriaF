@@ -4,6 +4,7 @@ import data.remoto.datasource.IRemoteDataSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import data.remoto.ObjectResult
+import model.PeliculaApi
 import ui.ResponseAppApi
 
 class RemoteRepository (val remoteDataSource: IRemoteDataSource): IRemoteRepository {
@@ -14,4 +15,14 @@ class RemoteRepository (val remoteDataSource: IRemoteDataSource): IRemoteReposit
                 is ObjectResult.Failure -> ObjectResult.Failure(result.exception)
             }
         }
+
+
+    // Appel de la méthode searchMoviesApi (dans le repositery)
+    /*fun searchMovieApi(query: String, pageNumber: Int) {
+        mQuery = query
+      //  mPageNumber = pageNumber
+        PeliculaApi.searchMoviesApi(query, pageNumber)
+    }*/
+
+
 }

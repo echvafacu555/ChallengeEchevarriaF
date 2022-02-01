@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import data.remoto.ObjectResult
+import data.remoto.repository.RemoteRepository
 import ui.Pelicula
 import usecases.PeliculaUseCases
 
@@ -18,7 +19,10 @@ class ViewModelDemo (private val peliculaUseCases: PeliculaUseCases): ViewModel(
     val listPeliculas: LiveData<List<Pelicula>> = mListPeliculas
 
 
-
+    // Appel de la méthode searchMoviesApi (dans le modèle de vue)
+    /*fun searchMovieApi(query: String?, pageNumber: Int) {
+        RemoteRepository.searchMovieApi(query, pageNumber)
+    }*/
 
     fun getPopularPeliculas(){
         viewModelScope.launch {
@@ -28,4 +32,8 @@ class ViewModelDemo (private val peliculaUseCases: PeliculaUseCases): ViewModel(
             }
         }
     }
+
+   /* fun searchNextPage() {
+        RemoteRepository.searchNextPage();
+    }*/
 }

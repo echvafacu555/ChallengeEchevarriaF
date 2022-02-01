@@ -4,6 +4,7 @@ import android.content.Context
 import data.remoto.MoviesApiClient
 import model.toResponseAppApi
 import data.remoto.ObjectResult
+
 import ui.ResponseAppApi
 
 
@@ -25,4 +26,9 @@ class RemoteDataSource(context: Context): IRemoteDataSource {
             ObjectResult.Failure(ex)
         }
     }
+
+    /*fun searchNextPage() {
+        searchMovieApi(mQuery, mPageNumber + 1)
+    }*/
+
 }

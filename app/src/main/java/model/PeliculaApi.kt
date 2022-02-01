@@ -19,6 +19,12 @@ class PeliculaApi {
             return retrofit!!
         }
 
+
+
     }
+    
+    
+    
+    
 
 }

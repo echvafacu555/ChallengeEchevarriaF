@@ -28,4 +28,5 @@ object MoviesApiClient {
     private fun interceptor(): HttpLoggingInterceptor =  HttpLoggingInterceptor().apply {
         this.level = HttpLoggingInterceptor.Level.BODY
     }
+
 }
